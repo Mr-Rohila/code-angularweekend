@@ -6,18 +6,16 @@ import { HttpClient } from '@angular/common/http';
 })
 export class GeneralapiService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
- mypath ="https://jsonplaceholder.typicode.com/posts";
+  mypath = "https://jsonplaceholder.typicode.com/posts";
 
-  mygetdata()
-  {
+  mygetdata() {
     return this.http.get(this.mypath);
   }
 
-  getsingledata(id:any)
-  {
-    return this.http.get(this.mypath,id);
+  getsingledata(id: any) {
+    return this.http.get(this.mypath + '/' + id);
   }
 
 
